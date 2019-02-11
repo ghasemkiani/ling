@@ -1,0 +1,32 @@
+{
+  "name": "@ghasemkiani/ling",
+  "version": "1.0.0",
+  "description": "Linguistic utilities",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://gitlab.com/ghasemkiani/ling.git"
+  },
+  "keywords": [
+    "javascript",
+    "nodejs",
+    "linguistics",
+    "persian",
+    "arabic"
+  ],
+  "author": "Ghasem Kiani",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://gitlab.com/ghasemkiani/ling/issues"
+  },
+  "homepage": "https://gitlab.com/ghasemkiani/ling#readme",
+  "devDependencies": {
+    "mocha": "^5.2.0"
+  },
+  "dependencies": {
+    "@ghasemkiani/commonbase": "github:ghasemkiani/commonbase"
+  }
+}
