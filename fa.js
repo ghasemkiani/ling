@@ -115,26 +115,26 @@ class Fa extends Base {
 		s = cutil.asString(s);
 		s = s.replace(/([\d])\.([\d])/g, (match, left, right) => left + this.persianDecimalPoint + right);
 		s = s.replace(/([\d])\,([\d])/g, (match, left, right) => left + this.persianThousandsSeparator + right);
-		this.digits.forEach(([la, fa]) => s = s.replace(la, fa));
+		this.digits.forEach(([la, fa]) => s = s.replace(new RegExp(la, "g"), fa));
 		return s;
 	}
 	toLatinNumbers(s) {
 		s = cutil.asString(s);
-		s = s.replaceAll(this.persianDecimalPoint, ".");
-		s = s.replaceAll(this.persianThousandsSeparator, ",");
-		this.digits.forEach(([la, fa]) => s = s.replace(fa, la));
+		s = s.replace(new RegExp(this.persianDecimalPoint, "g"), ".");
+		s = s.replace(new RegExp(this.persianThousandsSeparator, "g"), ",");
+		this.digits.forEach(([la, fa]) => s = s.replace(new RegExp(fa, "g"), la));
 		return s;
 	}
 	toArabicLetters(s) {
 		s = cutil.asString(s);
-		s = s.replaceAll(this.persianKaf, this.arabicKaf);
-		s = s.replaceAll(this.persianYeh, this.arabicYeh);
+		s = s.replace(new RegExp(this.persianKaf, "g"), this.arabicKaf);
+		s = s.replace(new RegExp(this.persianYeh, "g"), this.arabicYeh);
 		return s;
 	}
 	toPersianLetters(s) {
 		s = cutil.asString(s);
-		s = s.replaceAll(this.arabicKaf, this.persianKaf);
-		s = s.replaceAll(this.arabicYeh, this.persianYeh);
+		s = s.replace(new RegExp(this.arabicKaf, "g"), this.persianKaf);
+		s = s.replace(new RegExp(this.arabicYeh, "g"), this.persianYeh);
 		return s;
 	}
 }
