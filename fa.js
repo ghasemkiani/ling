@@ -1,7 +1,7 @@
 //	@ghasemkiani/ling/fa
 
-const {Base} = require("@ghasemkiani/commonbase/base");
-const {cutil} = require("@ghasemkiani/commonbase/cutil");
+const {Obj: Base} = require("@ghasemkiani/base/obj");
+const {cutil} = require("@ghasemkiani/base/cutil");
 
 class Fa extends Base {
 	get chars() {

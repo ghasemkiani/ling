@@ -27,6 +27,6 @@
     "mocha": "^5.2.0"
   },
   "dependencies": {
-    "@ghasemkiani/commonbase": "github:ghasemkiani/commonbase"
+    "@ghasemkiani/base": "github:ghasemkiani/base"
   }
 }
