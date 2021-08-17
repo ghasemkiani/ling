@@ -1,5 +1,5 @@
 //	@ghasemkiani/ling
 
-const {Fa, fa} = require("@ghasemkiani/ling/fa");
+import {Fa, fa} from "./fa.js";
 
-module.exports = {Fa, fa};
+export {Fa, fa};

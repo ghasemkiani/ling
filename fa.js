@@ -1,7 +1,7 @@
 //	@ghasemkiani/ling/fa
 
-const {Obj: Base} = require("@ghasemkiani/base/obj");
-const {cutil} = require("@ghasemkiani/base/cutil");
+import {Obj as Base} from "@ghasemkiani/base";
+import {cutil} from "@ghasemkiani/base";
 
 class Fa extends Base {
 	get chars() {
@@ -162,4 +162,4 @@ cutil.extend(Fa.prototype, {
 
 const fa = new Fa();
 
-module.exports = {Fa, fa};
+export {Fa, fa};
